@@ -1,0 +1,22 @@
+import autopy
+
+class MouseMover(object):
+    def move(self, mx, my):
+        autopy.mouse.move(int(mx), int(my))
+        return "Moved"
+    def smove(self, mx, my):
+        autopy.mouse.smooth_move(int(mx), int(my))
+        return "Moved"
+    def click(self):
+        autopy.mouse.click()
+        return "click"
+    def rclick(self):
+        autopy.mouse.toggle(True, autopy.mouse.RIGHT_BUTTON)
+        sleep(.1)
+        autopy.mouse.toggle(False, autopy.mouse.RIGHT_BUTTON)
+        return "rclick"
+    def mclick(self):
+        autopy.mouse.toggle(True, autopy.mouse.CENTER_BUTTON)
+        time.sleep(.1)
+        autopy.mouse.toggle(False, autopy.mouse.CENTER_BUTTON)
+        return "mclick"

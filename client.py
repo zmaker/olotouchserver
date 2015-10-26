@@ -6,7 +6,7 @@ import sys
 # Create a UDP socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-server_address = ('192.168.3.1', 5150)
+server_address = ('192.134.4.1', 5150)
 LOOP = True
 
 try:
